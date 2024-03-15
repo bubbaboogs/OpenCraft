@@ -60,8 +60,7 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.18f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Editor\EditorMethods.cs" />
-    <Compile Include="Assets\Scripts\Editor\TestWriter.cs" />
+    <Compile Include="Assets\Editor\AtlasPacker.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -1073,6 +1072,14 @@
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{6D84558F-D623-0CB4-722B-FC6D96BDFC85}</Project>
       <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="IngameDebugConsole.Editor.csproj">
+      <Project>{BDAB806C-A000-1572-225A-9E7EF1A3993E}</Project>
+      <Name>IngameDebugConsole.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="IngameDebugConsole.Runtime.csproj">
+      <Project>{7C82FC47-C8A7-2AB3-A1EE-D4E68957FDB3}</Project>
+      <Name>IngameDebugConsole.Runtime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

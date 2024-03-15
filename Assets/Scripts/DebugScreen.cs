@@ -62,7 +62,7 @@ public class DebugScreen : MonoBehaviour
         debugText += "\n";
         debugText += "Facing: " + playerFacing;
         debugText += "\n";
-        debugText += "Biome: " + (world.biome.biomeName);
+        debugText += "Biome: " + world.GetBiome(player.transform.position).biomeName;
         debugText += "\n";
         debugText += "Yaw: " + world.player.transform.rotation.eulerAngles.y;
         debugText += "\n";

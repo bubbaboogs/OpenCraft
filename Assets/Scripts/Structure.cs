@@ -6,6 +6,21 @@ public static class Structure
 {
 
     public static blockType block;
+
+    public static Queue<VoxelMod> GenerateMajorFlora(majorFlora index, Vector3 position, int minTrunkHeight, int maxTrunkHeight)
+    {
+        switch (index)
+        {
+            case majorFlora.Oak_Tree:
+                return MakeTree(position, minTrunkHeight, maxTrunkHeight);
+            case majorFlora.Cactus:
+                return MakeCacti(position, minTrunkHeight, maxTrunkHeight);
+        }
+
+        return new Queue<VoxelMod>();
+
+    }
+
     public static Queue<VoxelMod> MakeTree(Vector3 position, int minTrunkHeight, int maxTrunkHeight)
     {
         Queue<VoxelMod> queue = new Queue<VoxelMod>();
@@ -43,9 +58,24 @@ public static class Structure
 
         for (int i = 1; i < height; i++)
             queue.Enqueue(new VoxelMod(new Vector3(position.x, position.y + i, position.z), blockType.Oak_Log));
-        //for(int i = 0; i < 1; i++)
-        queue.Enqueue(new VoxelMod(new Vector3(position.x, position.y, position.z), blockType.Dirt));
 
         return queue;
+    }
+
+    public static Queue<VoxelMod> MakeCacti(Vector3 position, int minTrunkHeight, int maxTrunkHeight)
+    {
+
+        Queue<VoxelMod> queue = new Queue<VoxelMod>();
+
+        int height = (int)(maxTrunkHeight * Noise.Get2DPerlin(new Vector2(position.x, position.z), 23456f, 2f));
+
+        if (height < minTrunkHeight)
+            height = minTrunkHeight;
+
+        for (int i = 1; i <= height; i++)
+            queue.Enqueue(new VoxelMod(new Vector3(position.x, position.y + i, position.z), blockType.Cactus));
+
+        return queue;
+
     }
 }

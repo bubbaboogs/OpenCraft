@@ -4227,6 +4227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1137836095}
   - component: {fileID: 1137836094}
+  - component: {fileID: 1137836096}
   m_Layer: 0
   m_Name: World
   m_TagString: Untagged
@@ -4247,18 +4248,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settings:
-    version: a0.0.1
+    version: a0.1.0
     viewDistance: 4
     enableThreading: 1
+    enableChunkAnimation: 0
     mouseSensitivity: 2
     devOptions: 0
     _seed: buster gamez loves geometry dash
-  biome: {fileID: 11400000, guid: 128154eefd9ffd340ad03e5a567918d3, type: 2}
+  biomes:
+  - {fileID: 11400000, guid: 02049af79bea41c4b95708510689f354, type: 2}
+  - {fileID: 11400000, guid: 8f1154cda38379243bcb6be2196fd691, type: 2}
+  - {fileID: 11400000, guid: 1d07db8f10b93544a81114b299c001a9, type: 2}
   globalLightLevel: 1
-  day: {r: 0, g: 1, b: 0.9806, a: 0}
-  night: {r: 0, g: 0.001, b: 0.3018, a: 0}
+  day: {r: 0.47058824, g: 0.6627451, b: 1, a: 0}
+  night: {r: 0, g: 0.001, b: 0, a: 0}
   player: {fileID: 942575438}
   spawnPosition: {x: 0, y: 0, z: 0}
+  cameraObject: {fileID: 963194225}
+  cameraComponent: {fileID: 0}
   material: {fileID: 2100000, guid: e986e03a44678224ca7ff8d5e76fdc8d, type: 2}
   transparentMaterial: {fileID: 2100000, guid: 9c5465cc79173464f8bda78afb085b51, type: 2}
   blocktypes:
@@ -4418,6 +4425,30 @@ MonoBehaviour:
     bottomFaceTexture: 17
     leftFaceTexture: 17
     rightFaceTexture: 17
+  - blockName: Cactus
+    isSolid: 1
+    transparency: 0
+    icon: {fileID: 784999613, guid: ed69d4397fad4cf4981488d45d863383, type: 3}
+    renderNeighborFaces: 0
+    maxStackSize: 64
+    backFaceTexture: 19
+    frontFaceTexture: 19
+    topFaceTexture: 20
+    bottomFaceTexture: 20
+    leftFaceTexture: 19
+    rightFaceTexture: 19
+  - blockName: CactusTop
+    isSolid: 1
+    transparency: 0
+    icon: {fileID: 784999613, guid: ed69d4397fad4cf4981488d45d863383, type: 3}
+    renderNeighborFaces: 0
+    maxStackSize: 64
+    backFaceTexture: 19
+    frontFaceTexture: 19
+    topFaceTexture: 18
+    bottomFaceTexture: 20
+    leftFaceTexture: 19
+    rightFaceTexture: 19
   block: 0
   debugScreen: {fileID: 1036423658}
   creativeInventoryWindow: {fileID: 1922414529}
@@ -4439,6 +4470,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1137836096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137836093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28229ce087db051498ecd97824168c52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cycleDurationInMinutes: 20
+  dayColor: {r: 0.47058824, g: 0.6627451, b: 1, a: 0}
+  nightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1163884503
 GameObject:
   m_ObjectHideFlags: 0

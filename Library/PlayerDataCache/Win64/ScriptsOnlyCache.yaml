@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - BiomeAttributes
     - CreativeInventory
+    - DayNightCycle
     - DebugScreen
     - DragAndDropHandler
     - Player
@@ -47,7 +48,6 @@ ScriptsOnlyBuild:
   serializedClasses:
     Assembly-CSharp:
     - BlockType
-    - Lode
     - Settings
     UnityEngine.CoreModule:
     - UnityEngine.Events.ArgumentCache
@@ -95,71 +95,73 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16608}
+      Script: {instanceID: 16620}
     - Class: 114
-      Script: {instanceID: 16610}
+      Script: {instanceID: 16622}
     - Class: 114
-      Script: {instanceID: 16652}
+      Script: {instanceID: 16664}
     - Class: 114
-      Script: {instanceID: 16722}
+      Script: {instanceID: 16734}
     - Class: 114
-      Script: {instanceID: 16776}
+      Script: {instanceID: 16788}
     - Class: 114
-      Script: {instanceID: 17228}
+      Script: {instanceID: 17240}
     - Class: 114
-      Script: {instanceID: 17668}
+      Script: {instanceID: 17680}
     - Class: 114
-      Script: {instanceID: 17872}
+      Script: {instanceID: 17884}
     - Class: 114
-      Script: {instanceID: 17920}
-    - Class: 114
-      Script: {instanceID: 18306}
+      Script: {instanceID: 17932}
     - Class: 114
       Script: {instanceID: 18318}
     - Class: 114
-      Script: {instanceID: 18448}
+      Script: {instanceID: 18330}
     - Class: 114
-      Script: {instanceID: 18504}
+      Script: {instanceID: 18462}
     - Class: 114
-      Script: {instanceID: 18892}
+      Script: {instanceID: 18518}
     - Class: 114
-      Script: {instanceID: 18928}
+      Script: {instanceID: 18908}
     - Class: 114
-      Script: {instanceID: 19010}
+      Script: {instanceID: 18944}
     - Class: 114
-      Script: {instanceID: 19146}
+      Script: {instanceID: 19026}
     - Class: 114
-      Script: {instanceID: 19416}
+      Script: {instanceID: 19162}
     - Class: 114
-      Script: {instanceID: 19802}
+      Script: {instanceID: 19432}
     - Class: 114
-      Script: {instanceID: 20042}
+      Script: {instanceID: 19818}
     - Class: 114
-      Script: {instanceID: 20060}
+      Script: {instanceID: 20058}
     - Class: 114
-      Script: {instanceID: 20674}
+      Script: {instanceID: 20076}
     - Class: 114
-      Script: {instanceID: 21156}
+      Script: {instanceID: 20690}
     - Class: 114
-      Script: {instanceID: 21164}
+      Script: {instanceID: 21018}
     - Class: 114
-      Script: {instanceID: 21438}
+      Script: {instanceID: 21176}
     - Class: 114
-      Script: {instanceID: 21566}
+      Script: {instanceID: 21184}
     - Class: 114
-      Script: {instanceID: 21682}
+      Script: {instanceID: 21458}
     - Class: 114
-      Script: {instanceID: 21726}
+      Script: {instanceID: 21586}
     - Class: 114
-      Script: {instanceID: 21778}
+      Script: {instanceID: 21702}
     - Class: 114
-      Script: {instanceID: 21836}
+      Script: {instanceID: 21746}
     - Class: 114
-      Script: {instanceID: 21874}
+      Script: {instanceID: 21798}
     - Class: 114
-      Script: {instanceID: 22206}
+      Script: {instanceID: 21856}
     - Class: 114
-      Script: {instanceID: 22270}
+      Script: {instanceID: 21894}
+    - Class: 114
+      Script: {instanceID: 22226}
+    - Class: 114
+      Script: {instanceID: 22290}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -445,7 +447,7 @@ ScriptsOnlyBuild:
     className: DebugsOnScrollListener
   - hash:
       serializedVersion: 2
-      Hash: 07978035f104c587292417b7425808a5
+      Hash: b1249ec6605a86b92f262c9a53e39e4a
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: World
@@ -467,6 +469,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Flow
     namespaceName: Unity.VisualScripting
     className: ScriptMachine
+  - hash:
+      serializedVersion: 2
+      Hash: b45d3c3da3b29eab283eeb7817bcd35d
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ChunkLoadAnimation
   - hash:
       serializedVersion: 2
       Hash: 43ebd945b04bced376c791411cf5a289
@@ -811,6 +819,12 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
+      Hash: 1db2f26ff85372b787bb7c1a57e1afee
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: DayNightCycle
+  - hash:
+      serializedVersion: 2
       Hash: da5a949a0bbd2ff91bc51c5805c2c41f
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -967,7 +981,7 @@ ScriptsOnlyBuild:
     className: UnityOnScrollRectValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 9193dc30c9c447d4d7e0458383d7bf11
+      Hash: 68c0af5c36e5ac3feabd781aa7b54ca9
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: BiomeAttributes
@@ -1100,4 +1114,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/jdnis/Downloads/MC Game/Version a0.0.1/OpenCraft.exe
+  playerPath: C:/Users/jdnis/Downloads/OpenCraft/Version a0.1.0/OpenCraft.exe

@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638451780882242949
+      ticks: 638460384552675118
     m_Hash: 140048497
   m_LockFileStatus:
     m_FilePath: C:/Users/jdnis/Minecraft/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638451780882302787
+      ticks: 638460384552754917
     m_Hash: 1359215313
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -793,9 +793,11 @@ m_ResolvedPackages:
     - 1.8.0
     - 1.9.0
     - 1.9.1
+    - 1.9.2
     compatible:
     - 1.9.1
-    recommended: 1.9.1
+    - 1.9.2
+    recommended: 1.9.2
     deprecated:
     - 1.8.0-pre.1
   dependencies:

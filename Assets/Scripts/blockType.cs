@@ -12,5 +12,20 @@ public enum blockType
 	Cobblestone,
 	Glass,
 	Leaves,
-	Coal
+	Coal,
+	Cactus,
+	CactusTop
+}
+
+public enum majorFlora
+{
+	Oak_Tree,
+	Cactus
+}
+
+public enum  Biome
+{
+    Grasslands,
+	Desert,
+	Forest
 }

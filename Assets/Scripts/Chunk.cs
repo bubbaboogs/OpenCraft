@@ -73,6 +73,9 @@ public class Chunk
             world.chunksToUpdate.Add(this);
         }
 
+        if(world.settings.enableChunkAnimation)
+            chunkObject.AddComponent<ChunkLoadAnimation>();
+
     }
 
 
@@ -199,20 +202,36 @@ public class Chunk
     public void EditVoxel(Vector3 pos, blockType newID)
     {
         int xCheck = Mathf.FloorToInt(pos.x);
-
         int yCheck = Mathf.FloorToInt(pos.y);
-
         int zCheck = Mathf.FloorToInt(pos.z);
 
-        xCheck -= Mathf.FloorToInt(chunkObject.transform.position.x);
-        zCheck -= Mathf.FloorToInt(chunkObject.transform.position.z);
-
-        voxelMap[xCheck, yCheck, zCheck].id = newID;
-
-        lock (world.ChunkUpdateThreadLock)
+        if (IsVoxelInChunk(xCheck, yCheck, zCheck))
         {
-            world.chunksToUpdate.Insert(0, this);
-            UpdateSurroundingVoxels(xCheck, yCheck, zCheck);
+            xCheck -= Mathf.FloorToInt(chunkObject.transform.position.x);
+            zCheck -= Mathf.FloorToInt(chunkObject.transform.position.z);
+
+            voxelMap[xCheck, yCheck, zCheck].id = newID;
+
+            lock (world.ChunkUpdateThreadLock)
+            {
+                world.chunksToUpdate.Insert(0, this);
+                UpdateSurroundingVoxels(xCheck, yCheck, zCheck);
+            }
+        }
+        else
+        {
+            Chunk neighborChunk = world.GetChunkFromVector3(pos);
+
+            xCheck -= Mathf.FloorToInt(neighborChunk.chunkObject.transform.position.x);
+            zCheck -= Mathf.FloorToInt(neighborChunk.chunkObject.transform.position.z);
+
+            neighborChunk.voxelMap[xCheck, yCheck, zCheck].id = newID;
+
+            lock (world.ChunkUpdateThreadLock)
+            {
+                world.chunksToUpdate.Insert(0, neighborChunk);
+                UpdateSurroundingVoxels(xCheck, yCheck, zCheck);
+            }
         }
     }
 
